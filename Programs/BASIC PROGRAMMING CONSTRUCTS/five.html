@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class Average{
+            public static void main(String st[])
+        {
+                java.io.InputStreamReader isr = new java.io.InputStreamReader(System.in);
+                java.io.BufferedReader br = new java.io.BufferedReader(isr);
+                double sum = 0;
+            try{
+                System.out.println("Enter five numbers : ");
+                for(int i = 0; i<5;i++){
+                    System.out.print("number "+(i+1)+ ": ");
+                    sum += Double.parseDouble(br.readLine());
+                    
+                }
+                double average = sum / 5;
+                System.out.println("Average : "+average);
+            }
+            catch(Throwable ex){
+                System.out.println("invalid input : "+ex.getMessage());
+            }
+            }
+    }
+    Output:
+    
+    number 1: 2
+    number 2: 3
+    number 3: 5
+    number 4: 8
+    number 5: 9
+    Average : 5.4
+    </pre>
+</body>
+</html>

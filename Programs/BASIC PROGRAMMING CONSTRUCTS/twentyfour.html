@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class Main{
+            static boolean isPallindrome(int num){
+                int rev = 0, n = num;
+                while(num > 0){
+                    rev = (num%10) + (rev*10);
+                    num /= 10;
+                }
+                return (rev == n) ? true : false;
+            }
+            public static void main(String args[]){
+                int num = 12221;
+                if(isPallindrome(num)){
+                    System.out.println(num + " is Pallindrome");
+                }
+                else{
+                    System.out.println(num + " is not Pallindrome");
+                }
+            }
+        }
+          Output
+        12221 is Pallindrome
+    </pre>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class Employee{
+            void work(){
+                System.out.println("Working on a Project");
+            }
+        
+            void getSalary(){
+            }
+        }
+        
+        class HRManager extends Employee{
+            void work(){
+                System.out.println("HR Manager is Managing employees");
+            }
+            
+            void addEmployee(){
+                System.out.println("Company is hiring new employees");
+            }
+        }
+        
+        class Main{
+            public static void main(String args[]){
+            HRManager obj = new HRManager();
+            obj.work();
+            obj.addEmployee();
+            }
+        }
+        
+        OUTPUT
+        HR Manager is Managing employees
+Company is hiring new employees
+        
+        
+    </pre>
+</body>
+</html>

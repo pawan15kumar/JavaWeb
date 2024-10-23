@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class Person{
+            String fname, lname;
+                Person(String F, String L){
+                    fname = F;
+                    lname = L;
+                }
+                String getFirstName(){
+                    return fname;
+                }
+                String getLastName(){
+                    return lname;
+                }
+            
+            }
+            
+            class Employee extends Person{
+            String Empid, Jtitle;
+                Employee(String F, String L, String E, String J){
+                    super(F, L);
+                    Empid = E;
+                    Jtitle = J;
+                }
+                String getEmployeeID(){
+                    return Empid;
+                }
+                String getLastName(){
+                    return super.getLastName() + " , "+ Jtitle;
+                }
+            }
+            
+            class Main{
+                public static void main(String args[]){
+                Employee obj = new Employee("Pawan", "kumar", "E123", "Engineer");	
+                System.out.println("The First Name is "+obj.getFirstName());
+                System.out.println("The Last Name and Employee's Job Title is "+obj.getLastName()+" respectively.");
+                System.out.println("The Employee ID is "+obj.getEmployeeID());
+                
+                }
+            }
+            
+            
+            OUTPUT
+            The First Name is Pawan
+The Last Name and Employee's Job Title is kumar , Engineer respectively.
+The Employee ID is E123
+    </pre>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class StringToInteger{
+            public static void main(String st[]){
+                java.util.Scanner scanner = new java.util.Scanner(System.in);
+                System.out.print("Enter a String : ");
+                String str = scanner.next();
+            try{
+                int num = Integer.parseInt(str);
+                System.out.println("Coverted String to integer : "+num);
+            }
+            catch(Throwable ex){
+                System.out.println("Please enter the valid input : "+ex.getMessage());
+                }
+            }
+        }
+    Output:
+    
+    Enter a String : 67
+    Coverted String to integer : 67
+    </pre>
+</body>
+</html>

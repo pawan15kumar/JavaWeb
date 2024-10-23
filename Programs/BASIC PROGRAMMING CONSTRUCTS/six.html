@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class Swap{
+            int num1, num2;
+            Swap(int n1, int n2){
+                num1 = n1;
+                num2 = n2;
+                System.out.println("value of num1 = "+num1);
+                System.out.println("value of num2 = "+num2);
+            }
+        
+            void display(){
+                int temp = num1;
+            num1 = num2;
+            num2 = temp;
+                System.out.println("value of num1 after swapping = "+num1);
+                System.out.println("value of num2 after swapping = "+num2);
+            }
+        }
+        
+        class Main{
+            public static void main(String args[]){
+                Swap swap = new Swap(10,20);
+                swap.display();
+            }
+        }
+    
+    Output:
+    
+    value of num1 = 10
+    value of num2 = 20
+    value of num1 after swapping = 20
+    value of num2 after swapping = 10  
+    </pre>
+</body>
+</html>

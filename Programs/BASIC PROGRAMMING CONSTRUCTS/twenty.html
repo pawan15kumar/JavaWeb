@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class AreaOfCircle{
+            double radius;
+            double area;
+            AreaOfCircle(int r){
+                radius = r;
+            }
+            double areaOfCircle(){
+                return 3.14*radius*radius;
+            }
+        }
+        
+        class Main{
+            public static void main(String st[]){
+                AreaOfCircle circle = new AreaOfCircle(5);
+                System.out.println("Area of Circle : "+circle.areaOfCircle());
+            }
+        }
+    Output:
+    
+    Area of Circle : 78.5
+    </pre>
+</body>
+</html>

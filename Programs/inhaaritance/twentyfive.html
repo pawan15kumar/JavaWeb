@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        abstract class Bird{
+            abstract void fly();
+            abstract void makeSound();
+        }
+        
+        class Eagle extends Bird{
+            void fly(){
+                System.out.println("Eagles can fly upto about 16,000 feet.");
+            }
+            void makeSound(){
+                System.out.println("Eagle make the high-pitched whistling or piping notes.\n");
+            }
+        }
+        
+        class Hawk extends Bird{
+            void fly(){
+                System.out.println("Hawk can fly upto about 37,100 feet.");
+            }
+            void makeSound(){
+                System.out.println("Hawk make a loud kee-aah sound.");
+            }
+        }
+        
+        class Main{
+            public static void main(String args[]){
+                Eagle eagle = new Eagle();
+                    eagle.fly();
+                    eagle.makeSound();	
+                Hawk hawk = new Hawk();
+                    hawk.fly();
+                    hawk.makeSound();
+            }
+        }
+        Output
+        Eagles can fly upto about 16,000 feet.
+Eagle make the high-pitched whistling or piping notes.
+
+Hawk can fly upto about 37,100 feet.
+Hawk make a loud kee-aah sound.
+    </pre>
+</body>
+</html>

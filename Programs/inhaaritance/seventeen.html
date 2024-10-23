@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        abstract class BankAccount{
+            private double A, B;
+                abstract void deposit(double A);
+                abstract void withdraw(double B);
+            }
+            
+            class SavingAccount extends BankAccount{
+            private double Balance;
+                SavingAccount(double initialBalance){
+                    Balance = initialBalance;
+                    System.out.println("The Initial Balance in Saving Account is "+Balance);
+                }
+                void deposit(double amount){
+                    Balance += amount;
+                    System.out.println("Deposited : "+amount+" New Balance : "+Balance);
+                }
+                void withdraw(double amount){
+                    Balance -= amount;
+                    System.out.println("Withdraw : "+amount+" New Balance : "+Balance);
+                }
+            }
+            
+            class CurrentAccount extends BankAccount{
+            private double Balance;
+                CurrentAccount(double initialBalance){
+                    Balance = initialBalance;
+                    System.out.println("The Initial Balance in Current Account is "+Balance);
+                }
+                void deposit(double amount){
+                    Balance += amount;
+                    System.out.println("Deposited : "+amount+" New Balance : "+Balance);
+                }
+                void withdraw(double amount){
+                    Balance -= amount;
+                    System.out.println("Withdraw : "+amount+" New Balance : "+Balance);
+                }
+            
+            }
+            
+            class Main{
+                public static void main(String args[]){
+                    SavingAccount saving = new SavingAccount(1000);
+                        saving.deposit(200);
+                        saving.withdraw(300);
+                    CurrentAccount current = new CurrentAccount(30000);
+                        current.deposit(500);
+                        current.withdraw(300);
+                }
+            }
+            OUTPUT
+            The Initial Balance in Saving Account is 1000.0
+Deposited : 200.0 New Balance : 1200.0
+Withdraw : 300.0 New Balance : 900.0
+The Initial Balance in Current Account is 30000.0
+Deposited : 500.0 New Balance : 30500.0
+Withdraw : 300.0 New Balance : 30200.0
+    </pre>
+</body>
+</html>

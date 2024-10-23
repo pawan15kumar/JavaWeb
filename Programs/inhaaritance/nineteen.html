@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        abstract class Employee{
+            abstract double calculateSalary();
+            abstract void displayInfo();
+        }
+        
+        class Manager extends Employee{
+        private String Name;
+        private double Salary, Bonus;
+            Manager(String name, double BaseSal, double bonus){
+                Name = name;
+                Salary = BaseSal;
+                Bonus = bonus;	
+                
+            }
+            double calculateSalary(){
+                    return Salary+Bonus;	
+            }
+            void displayInfo(){
+                System.out.println("Manager's name : "+Name);
+                System.out.println("The Base Salary of Manager is "+Salary);
+                System.out.println("The provided Bonus of Manager is "+Bonus);
+                System.out.println("Salary after Bonus : "+calculateSalary());
+                
+            }
+        }
+        
+        class Programmer extends Employee{
+        private String Name;
+        private double Salary, Bonus;
+            Programmer(String name, double BaseSal, double bonus){
+                Name = name;
+                Salary = BaseSal;
+                Bonus = bonus;	
+                
+            }
+            double calculateSalary(){
+                    return Salary+Bonus;	
+            }
+            void displayInfo(){
+                System.out.println("Programmer's name : "+Name);
+                System.out.println("The Base Salary of Programmer is "+Salary);
+                System.out.println("The provided Bonus of Programmer is "+Bonus);
+                System.out.println("Salary after Bonus : "+calculateSalary());
+                
+            }
+        
+        
+        }
+        
+        class Main{
+            public static void main(String args[]){
+                Manager manager = new Manager("pawan", 50000, 10000);
+                    manager.displayInfo();
+                Programmer programmer = new Programmer("Afseen", 40000, 2500);
+                    programmer. displayInfo();
+            }
+        }
+        
+Output
+Manager's name : pawan
+The Base Salary of Manager is 50000.0
+The provided Bonus of Manager is 10000.0
+Salary after Bonus : 60000.0
+Programmer's name : Afseen
+The Base Salary of Programmer is 40000.0
+The provided Bonus of Programmer is 2500.0
+Salary after Bonus : 42500.0        
+    </pre>
+</body>
+</html>

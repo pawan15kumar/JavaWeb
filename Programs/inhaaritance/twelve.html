@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class A{
+            int x;
+                A(int y){
+                    x = y;
+                }
+            
+            }
+            
+            class B extends A{
+                B(){
+                    super(10);
+                }
+            
+            }
+            
+            class Main{
+                public static void main(String args[]){
+                    B obj = new B();
+                    System.out.println("The value of x is "+obj.x);
+                }
+            }
+            OUTPUT
+            The value of x is 10
+    </pre>
+</body>
+</html>

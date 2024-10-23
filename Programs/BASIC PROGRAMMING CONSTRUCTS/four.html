@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class operations{
+            private int Num1, Num2;    
+            operations(int n1, int n2){
+                Num1 = n1;
+                Num2 = n2;
+                System.out.println("The value of Num1 = "+Num1);
+                System.out.println("The value of Num2 = "+Num2);
+            }
+            int sum(){
+                return Num1 + Num2;
+            }
+            int multiply(){
+                return Num1 * Num2;
+            }
+            int subtract(){
+                return Num1 - Num2;
+            }
+            int divide(){
+                return Num1/Num2 ;
+            }
+            int remainder(){
+                return Num1%Num2;
+            }
+        }
+        class Main{
+            public static void main(String args[]){
+                operations operation = new operations(3,2);
+                System.out.println("Sum of Num1 and Num2 = "+operation.sum());
+                System.out.println("Product of Num1 and Num2 = "+operation.multiply());
+                System.out.println("Difference of Num1 and Num2 = "+operation.subtract());
+                System.out.println("Quotient of Num1 and Num2 = "+operation.divide());
+                System.out.println("Remainder of Num1 and Num2 = "+operation.remainder());
+            }
+        }
+    
+    Output:
+    
+    The value of Num1 = 3
+    The value of Num2 = 2
+    Sum of Num1 and Num2 = 5
+    Product of Num1 and Num2 = 6
+    Difference of Num1 and Num2 = 1
+    Quotient of Num1 and Num2 = 1
+    Remainder of Num1 and Num2 = 1
+    </pre>
+</body>
+</html>

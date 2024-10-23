@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        abstract class Instrument{
+            abstract void play();
+            abstract void tune();
+        }
+        
+        class Glockenspiel extends Instrument{
+            void play(){
+                System.out.println("Playing the Glockenspiel.");
+            }
+            void tune(){
+                System.out.println("Glockenspiel is tuned by adjusting the lenght of steel bars.\n");
+            }
+        }
+        
+        class Violin extends Instrument{
+            void play(){
+                System.out.println("Playing the Violin.");
+            }
+            void tune(){
+                System.out.println("It's difficult to tune Violin.");
+            }
+        }
+        
+        class Main{
+            public static void main(String args[]){
+                Glockenspiel glock = new Glockenspiel();
+                    glock.play();	
+                    glock.tune();
+                Violin violin = new Violin();
+                    violin.play();	
+                    violin.tune();	
+            }
+        }
+        Output
+        Playing the Glockenspiel.
+Glockenspiel is tuned by adjusting the lenght of steel bars.
+
+Playing the Violin.
+It's difficult to tune Violin.
+    </pre>
+</body>
+</html>

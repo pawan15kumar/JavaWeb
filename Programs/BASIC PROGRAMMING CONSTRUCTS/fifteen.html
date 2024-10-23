@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class Main{
+            public static void main(String st[]){
+                java.util.Scanner scanner = new java.util.Scanner(System.in);
+                System.out.print("Enter Seconds : ");
+                int seconds = scanner.nextInt();
+                
+                int hours = seconds / 3600;
+                int minutes = (seconds % 3600)/60;
+                int sec = seconds % 60;
+        
+                System.out.println(seconds + " seconds is equal to");
+                System.out.println(hours + " hours");
+                System.out.println(minutes + " minutes");
+                System.out.println(sec +" sec");
+            }
+        }
+    Output:
+    
+    Enter Seconds : 7894
+    7894 seconds is equal to
+    2 hours
+    11 minutes
+    34 sec
+    </pre>
+</body>
+</html>

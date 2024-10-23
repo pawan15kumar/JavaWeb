@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class StringToDate{
+            public static void main(String st[]) throws java.text.ParseException
+            {
+                String str = "2024-01-01";
+                java.time.LocalDate date = java.time.LocalDate.parse(str);
+                System.out.println("Converted Date : "+date);
+            }
+        }
+    Output:
+    
+    Converted Date : 2024-01-01
+    </pre>
+</body>
+</html>

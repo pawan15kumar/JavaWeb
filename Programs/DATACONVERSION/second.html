@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class IntToString{
+            public static void main(String st[]){
+                int num = 56;
+                try{
+                    String str = Integer.toString(num);
+                    System.out.println("Converted String : "+num);
+                }
+                catch(NumberFormatException ex){
+                    System.out.println("Enter the valid input."+ex.getMessage());
+                }
+            }
+        }
+    Output:
+    
+    Converted String : 56
+  
+    </pre>
+</body>
+</html>

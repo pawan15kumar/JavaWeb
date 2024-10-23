@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        abstract class Person{
+            abstract void eat();
+            abstract void exercise();
+        }
+        
+        class Athlete extends Person{
+            void eat(){
+                System.out.println("Athelet person eat foods rich in carbohydrates.");
+            }	
+            void exercise(){
+                System.out.println("Atlhete person exercise regularly.\n");
+            }
+        }
+        
+        class LazyPerson extends Person{
+            void eat(){
+                System.out.println("Lazy person eats fast foods.");
+            }	
+            void exercise(){
+                System.out.println("Lazy person don't exercise.");
+            }
+        }
+        
+        class Main{
+            public static void main(String args[]){
+                Athlete athlete = new Athlete();
+                    athlete.eat();
+                    athlete.exercise();
+                LazyPerson lazy = new LazyPerson();
+                    lazy.eat();
+                    lazy.exercise();
+            }
+        }
+        
+        
+Output
+Athelet person eat foods rich in carbohydrates.
+Atlhete person exercise regularly.
+
+Lazy person eats fast foods.
+Lazy person don't exercise.        
+    </pre>
+</body>
+</html>

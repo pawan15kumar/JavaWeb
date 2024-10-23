@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class Main{
+            public static void main(String st[]){
+                java.io.InputStreamReader isr = new java.io.InputStreamReader(System.in);
+                java.io.BufferedReader reader = new java.io.BufferedReader(isr);
+            try{
+                System.out.print("Enter a character : ");
+                char c = (char)reader.read();
+                int ascii = c;
+                System.out.println("The ASCII value of "+c+ " is "+ascii);
+            }
+            catch(Throwable ex){
+                System.out.println(ex.getMessage());
+            }
+            }
+        }
+    
+    Output:
+    
+    Enter a character : e
+    The ASCII value of e is 101
+    </pre>
+</body>
+</html>

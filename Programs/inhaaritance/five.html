@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class BankAccount{
+            double balance;
+           
+           BankAccount(double initialBalance){	
+               balance = initialBalance;
+           }
+           void deposit(double amount){
+               balance +=amount;
+               System.out.println("Deposited " +amount+" new balance " +balance);
+       
+           }
+       
+           void withdraw(double amount){
+                   balance -= amount;
+               System.out.println("Withdrawn amount  "+amount+ " new balance  "+balance);	
+           }
+       }
+       
+       class SavingAccount extends BankAccount{
+           SavingAccount(double initialBalance){
+               super(initialBalance);
+           }
+           void withdraw(double amount){
+               if(balance - amount<100){
+                   System.out.println("Don't have sufficeint Amount to withdraw");
+               }
+               else{
+                   super.withdraw(amount);
+               }	
+           }
+       
+       }
+       
+       class Main{
+       public static void main(String args[]){
+           SavingAccount obj = new SavingAccount(1000);
+           obj.deposit(500);
+           obj.withdraw(200);
+           obj.withdraw(1500);
+       }
+       }
+outout
+Deposited 500.0 new balance 1500.0
+Withdrawn amount  200.0 new balance  1300.0
+Don't have sufficeint Amount to withdraw
+    </pre>
+</body>
+</html>

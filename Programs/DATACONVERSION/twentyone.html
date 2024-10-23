@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class A {
+            public static void main(String[] args) {
+                String a = "true";
+                String b = "false";
+                String c = "abc";
+        
+                boolean bool1 = Boolean.parseBoolean(a);
+                boolean bool2 = Boolean.parseBoolean(b);
+                boolean bool3 = Boolean.parseBoolean(c);
+        
+                System.out.println( bool1); 
+                System.out.println( bool2); 
+                System.out.println( bool3); 
+            }
+        }
+        
+        
+        Output:
+        F:\JAVA>javac dc21.java
+        
+        F:\JAVA>java A
+        true
+        false
+        false
+    </pre>
+</body>
+</html>

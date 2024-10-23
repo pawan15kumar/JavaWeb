@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        abstract class Shape{
+            abstract double calculateArea();
+            abstract double calculatePerimeter();
+        }
+        
+        class Circle extends Shape{
+        double Radius;
+            Circle(double r){
+                Radius = r;
+            }
+            double calculateArea(){
+                return 3.14*(Radius * Radius);
+            }
+            double calculatePerimeter(){
+                return 2 * 3.14 * Radius;
+            }
+        }
+        
+        class Triangle extends Shape{
+        double Height, Base, Side1, Side2;
+            Triangle(double H, double B){
+                Height = H;
+                Base = B;
+            }
+            Triangle(double S1, double S2, double B){
+                Side1 = S1;
+                Side2 = S2;
+                Base = B;
+            }
+            double calculateArea(){
+                return (Height*Base)/2;
+            }
+            double calculatePerimeter(){
+                return (Side1 + Side2 + Base);
+            }
+        }
+        
+        class Main{
+            public static void main(String args[]){
+                Circle circle = new Circle(2);
+                System.out.println("The Area of cicle is "+circle.calculateArea());
+                System.out.println("The perimeter of circle is "+circle.calculatePerimeter());
+        
+                Triangle triangle = new Triangle(10,12);
+                Triangle triangle1 = new Triangle(11,13,12);
+                System.out.println("The area of Triangle is "+triangle.calculateArea());
+                System.out.println("The perimeter of Triangle is "+triangle1.calculatePerimeter());	
+        
+        
+            }
+        }
+        
+        
+        
+OUTPUT 
+The Area of cicle is 12.56
+The perimeter of circle is 12.56
+The area of Triangle is 60.0
+The perimeter of Triangle is 36.0       
+    </pre>
+</body>
+</html>

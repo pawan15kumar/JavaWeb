@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        abstract class Shape3D{
+            abstract double calculateVolume();
+            //abstract double calculateSurfaceArea();
+        }
+        
+        class Sphere extends Shape3D{
+        private double Radius;
+            Sphere(double r){
+                Radius = r;
+            }
+            double calculateVolume(){
+                return (4/3.0)*3.14*Radius*Radius*Radius;
+            }
+            double calculateSurfaceArea(){
+                return 4*3.14*(Radius*Radius);
+            }
+        }
+        
+        class Cube extends Shape3D{
+        private double Side;
+            Cube(double S){
+                Side = S;
+            }
+            double calculateVolume(){
+                return Side*Side*Side;
+            }
+            double calculateSurfaceArea(){
+                return 6*(Side*Side);
+            }
+        
+        }
+        
+        class Main{
+        public static void main(String args[]){
+            Sphere sphere = new Sphere(3);
+                System.out.println("The Volume of Sphere = "+sphere.calculateVolume());
+                System.out.println("The Surface Area of Sphere = "+sphere.calculateSurfaceArea());
+            Cube cube = new Cube(4);
+                System.out.println("The Volume of Cube = "+cube.calculateVolume());
+                System.out.println("The Surface Area of Cube = "+cube.calculateSurfaceArea());	
+            }
+        }
+OUTPUT
+The Volume of Sphere = 113.03999999999998
+The Surface Area of Sphere = 113.04
+The Volume of Cube = 64.0
+The Surface Area of Cube = 96.0        
+    </pre>
+</body>
+</html>

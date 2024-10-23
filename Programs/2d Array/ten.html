@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+
+import java.io.*;
+class Matrix {
+
+public static void main(String arg[]) throws java.io.IOException{
+InputStreamReader isr=new InputStreamReader(System.in);
+BufferedReader br =new BufferedReader(isr);
+
+System.out.print("Enter the number of rows: ");
+int rows = Integer.parseInt(br.readLine());
+System.out.print("Enter the number of columns: ");
+int columns =  Integer.parseInt(br.readLine());
+
+int matrix[][] = new int[rows][columns];
+
+System.out.println("Enter the elements of the matrix:");
+for (int i = 0; i < rows; i++) {
+System.out.println("Enter elements for row "+ (i + 1));
+for (int j = 0; j < columns; j++) {
+matrix[i][j] = Integer.parseInt(br.readLine());
+}
+}
+System.out.println("Matrix:");
+for (int i = 0; i < rows; i++) {
+for (int j = 0; j < columns; j++) {
+System.out.print(matrix[i][j] + " ");
+}
+System.out.println();
+}
+
+System.out.println("Transpose Matrix:");
+for (int i = 0; i < columns; i++) {
+for (int j = 0; j < rows; j++) {
+System.out.print(matrix[j][i] + " ");
+}
+System.out.println();
+}
+}
+}
+
+D:\java_folder\2darray>javac 2d10.java
+
+D:\java_folder\2darray>java Matrix
+Enter the number of rows: 3
+Enter the number of columns: 2
+Enter the elements of the matrix:
+Enter elements for row 1
+3
+3
+Enter elements for row 2
+2
+2
+Enter elements for row 3
+3
+2
+Matrix:
+3 3
+2 2
+3 2
+Transpose Matrix:
+3 2 3
+3 2 2
+    </pre>
+</body>
+</html>

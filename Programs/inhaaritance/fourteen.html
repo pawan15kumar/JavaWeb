@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class Parent{
+            void Account(){
+                System.out.println("Accounts should be handled manually");
+            }
+            void Worship(){
+                System.out.println("Worship must be done early morning");
+            }
+        }
+        
+        class Child extends Parent{
+            void Account(){
+                System.out.println("Accounts should be handled through softwares");
+            }
+            void Store(){
+                System.out.println("Grocery Store");
+            }
+        }
+        
+        class Main{
+            public static void main(String args[]){
+                Parent obj = new Child();
+                obj.Account();
+                obj.Worship();
+                //obj.Store(); 
+            }
+        }
+        OUTPUT
+        Accounts should be handled through softwares
+Worship must be done early morning
+    </pre>
+</body>
+</html>

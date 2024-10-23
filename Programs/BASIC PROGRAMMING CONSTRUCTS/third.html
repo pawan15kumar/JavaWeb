@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class Product{
+            private int num1, num2;
+            Product(int N1, int N2){
+                num1 = N1;
+                num2 = N2;
+                System.out.println("Value of num1 = "+num1);
+                System.out.println("Value of num2 = "+num2);    
+            }
+            int multi(){
+                return num1 * num2;
+            }
+        }
+        
+    class Main{
+            public static void main(String args[]){
+                Product product = new Product(2,3);
+                System.out.println("The Product of num1 and num2 = "+product.multi());
+            }
+        }
+    Output:
+    
+    Value of num1 = 2
+    Value of num2 = 3
+    The Product of num1 and num2 = 6
+    </pre>
+</body>
+</html>
