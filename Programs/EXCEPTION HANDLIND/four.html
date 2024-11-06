@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class PositiveNumberException extends Throwable{
+            public String getMessage(){
+                return "File Contain Positive Numbers";
+            }
+        }
+        class Main{
+            static void readFile() throws java.io.FileNotFoundException, PositiveNumberException{
+                java.util.Scanner sc = new java.util.Scanner(new java.io.File("my.txt"));
+                while(sc.hasNextInt()){
+                    if(sc.nextInt() < 0){
+                        throw (new PositiveNumberException());
+                    }
+                }
+            }
+            public static void main(String[] args){
+                try{
+                    readFile();
+                }
+                catch(PositiveNumberException e){
+                    System.out.println(e.getMessage());
+                }
+                catch(Throwable e){
+                    System.out.println(e.getMessage());
+                }
+            }
+        }
+          Input
+        my.txt file with positive numbers
+          Output
+        File Contain Positive Numbers
+    </pre>
+</body>
+</html>

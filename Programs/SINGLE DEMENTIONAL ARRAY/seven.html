@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class Main{
+            static void printArrayValueAtEven(int arr[]){
+                for(int i = 1; i < arr.length; i += 2){
+                    System.out.println("Value at " + (i+1) + " position : " + arr[i]);
+                }
+            }
+        
+            public static void main(String[] args){
+                int arr[] = {83, 49, 289, 27, 23};
+                printArrayValueAtEven(arr);
+            }
+        }
+          Output
+        Value at 2 position : 49
+        Value at 4 position : 27
+    </pre>
+</body>
+</html>

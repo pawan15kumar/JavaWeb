@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        interface Playable{
+            void play();
+        }
+        class Football implements Playable{
+            public void play(){
+                System.out.println("Playing Football");
+            }
+        }
+        class Volleyball implements Playable{
+            public void play(){
+                System.out.println("Playing Volleyball");
+            }
+        }
+        class Basketball implements Playable{
+            public void play(){
+                System.out.println("Playing Basketball");
+            }
+        }
+        class Main{
+            public static void main(String args[]){
+                Playable obj = new Football();
+                obj.play();
+                obj = new Volleyball();
+                obj.play();
+                obj = new Basketball();
+                obj.play();
+            }
+        }
+          Output
+        Playing Football
+        Playing Volleyball
+        Playing Basketball
+        
+    </pre>
+</body>
+</html>

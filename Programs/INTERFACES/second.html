@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        interface Animal {
+            void speak();
+        }
+        
+        class Dog implements Animal {
+        
+            public void speak() {
+                System.out.println("Dog is barking");
+            }
+        }
+        
+        class Main {
+            public static void main(String[] args) {
+                Dog dog = new Dog();
+                dog.speak();
+            }
+        }
+          Output
+        Dog is barking
+    </pre>
+</body>
+</html>

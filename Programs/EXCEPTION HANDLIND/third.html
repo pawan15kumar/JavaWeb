@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class Main{
+            public static String readFile(String filepath) throws  java.io.FileNotFoundException, java.io.IOException{
+                java.io.InputStreamReader isr = new java.io.FileReader(filepath);
+                String str = "";
+                char ch = 'c';
+                while((ch = (char)isr.read()) != -1){
+                    str += ch;
+                }
+                return str;
+            }
+            public static void main(String args[]){
+                try{
+                    readFile("Hello.txt");
+                }
+                catch(java.io.FileNotFoundException ex){
+                    System.out.println("File Not Found : " + ex.getMessage());
+                }
+                catch(Throwable th){
+                    System.out.println("Unexpected Erro : " + th.getMessage());
+                }
+            }
+        }
+          Output
+        File Not Found : Hello.txt (The system cannot find the file specified)
+    </pre>
+</body>
+</html>

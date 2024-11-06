@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        import java.io.*;
+        
+        class A {
+            public static void main(String x[]) throws java.io.IOException {
+                System.out.print("Enter your marks:");
+                InputStreamReader isr = new InputStreamReader(System.in);
+                BufferedReader obj = new BufferedReader(isr);
+                int marks = Integer.parseInt(obj.readLine());
+                if (marks >= 80 && marks <= 100)
+                    System.out.println("A grade");
+                else if (marks >= 60 && marks < 80)
+                    System.out.println("B grade");
+                else if (marks >= 40 && marks < 60)
+                    System.out.println("C grade");
+                else if (marks >= 0 && marks < 40)
+                    System.out.println("D grade");
+                else
+                    System.out.println("Enter valid marks");
+            }
+        }
+        
+
+            
+                
+Output:
+            
+                E:\bca4231>javac bpc67.java
+
+                E:\bca4231>java A
+                Enter your marks:99
+                A grade
+
+                
+                
+            
+    </pre>
+</body>
+</html>

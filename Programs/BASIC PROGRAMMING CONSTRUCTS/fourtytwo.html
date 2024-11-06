@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        import java.io.*;
+        class A{
+         static void check(char ch){
+        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
+                        ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U')
+        System.out.println("The entered character is vowel");	
+        else
+        System.out.println("The entered character is consonant");
+        }
+        
+        public static void main(String s[]) throws IOException{
+        System.out.println("ENTER SOME CHARACTER:");	
+         InputStreamReader isr=new InputStreamReader(System.in);
+        char ch=(char)isr.read();
+        check(ch);
+            
+        }
+        }
+
+            
+                
+Output:
+            
+                D:\java_folder\basic_constructs>javac b42.java
+
+                D:\java_folder\basic_constructs>java A
+                ENTER SOME CHARACTER:
+                j
+                The entered cdharacter is consonant
+    </pre>
+</body>
+</html>

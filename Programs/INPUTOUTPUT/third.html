@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        import java.util.Scanner;
+
+class Main{
+	public static void main(String[] args){
+		int var = 0;
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter Integer Value : ");
+		try{
+			var = sc.nextInt();
+			System.out.println("Integer Entered : " + var);
+		}
+		catch(java.util.InputMismatchException ime){
+			System.out.println("Entered Non Integer Values");
+		}
+		catch(Throwable th){
+			System.out.println("Unexpected Error : " + th.getMessage());
+		}
+	}
+}
+  Input
+Enter Integer Value : 483
+  Output
+Integer Entered : 483
+    </pre>
+</body>
+</html>

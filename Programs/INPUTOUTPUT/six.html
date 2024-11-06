@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        import java.util.Scanner;
+
+class Main{
+	public static void main(String[] args){
+		boolean var = false;
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter true/false Value : ");
+		try{
+			var = sc.nextBoolean();
+			System.out.println("Value Entered : " + var);
+		}
+		catch(java.util.InputMismatchException ime){
+			System.out.println("Entered Wrong Value");
+		}
+		catch(Throwable th){
+			System.out.println("Unexpected Error : " + th.getMessage());
+		}
+	}
+}
+  Input
+Enter true/false Value : true
+  Output
+Value Entered : true
+    </pre>
+</body>
+</html>

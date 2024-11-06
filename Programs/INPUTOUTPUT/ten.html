@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class Main{
+            public static void main(String[] args) throws java.io.IOException, java.io.FileNotFoundException{
+                java.io.InputStreamReader isr = new java.io.FileReader("my.txt");
+                int ch = 5, numoflines = 0, numofchars = 0, wordcount = 0;
+                System.out.println("Content of my.txt File is below : \n");
+                while((ch = isr.read()) != -1){
+                    numofchars++;
+                    System.out.print((char)ch);
+                    if(Character.isLetterOrDigit(((char)ch))){
+                        while((ch = isr.read()) != -1 && ((char)ch) != '\n' && ((char)ch) != ' '){
+                            numofchars++;
+                            System.out.print((char)ch);
+                        }
+                        wordcount++;
+                    }
+                    if(((char)ch) == '\n'){
+                        numoflines++;
+                        System.out.print((char)ch);
+                    }
+                    if(((char)ch) == ' '){
+                        System.out.print((char)ch);
+                    }
+                }
+                System.out.println("\nNumber of Lines : " + ++numoflines);
+                System.out.println("Number of Characters : " + numofchars);
+                System.out.println("Number of Words : " + wordcount);
+            }
+        }
+          Input
+        When a seed of a plant or tree grow it makes the area around it greener. Also, it supports many life forms. Birds make their nests, many reptiles and animals live on it or near it.
+        
+        
+        Besides, all these many beautiful flowers, food growing on it. Moreover, many parts of trees such as roots, leaves, stem, flower, seeds, are also edible. Most importantly they never ask anything in return for their services and the gifts they give. Trees also keep the balance in the ecosystem and ecology.
+        
+        
+        To conclude, we can say that trees are very important and beneficial for every life form on earth. Without them, the survival of life on earth will become difficult and after some time every species starts to die because of lack of oxygen on the planet. So, to save our lives and to survive we have to learn the importance of trees and also have to teach our children the importance of trees.
+          Output
+        Number of Lines : 5
+        Number of Characters : 727
+        Number of Words : 160
+    </pre>
+</body>
+</html>

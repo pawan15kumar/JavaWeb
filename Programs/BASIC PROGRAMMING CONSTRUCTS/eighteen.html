@@ -7,18 +7,35 @@
 </head>
 <body>
    <pre>
-    class SquareRoot	
-        {
-        public static void main(String st[])
-        {
-        double num=36,squareroot;
-        squareroot=Math.sqrt(num);
-        System.out.println("Squreroot of "+num+ " is "+squareroot);
+    class A {
+        public static void main(String[] args) {
+          
+            String numberString = "abcd";
+            
+            try {
+              
+                int number = Integer.parseInt(numberString);
+                
+                
+                System.out.println("The integer value is: " + number);
+            } catch (NumberFormatException e) {
+               
+                System.out.println("Error: PLEASE ENTER A VALID STRING!");
+            }
         }
     }
+    
+    
+        
+            
 Output:
+        
+            D:\java4231>javac bpc18.java
+    
+            D:\java4231>java A
+            Error: PLEASE ENTER A VALID STRING!
+    
 
-Squreroot of 36.0 is 6.0
    </pre>
 </body>
 </html>

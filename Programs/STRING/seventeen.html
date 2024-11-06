@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        import java.util.Scanner;
+
+public class PalindromeCheck {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine().replaceAll("\\s+", "").toLowerCase();
+        String reversed = new StringBuilder(input).reverse().toString();
+        System.out.println(input.equals(reversed) ? "Palindrome" : "Not a palindrome");
+        scanner.close();
+    }
+}
+
+/* Input:
+A man a plan a canal Panama
+Output:
+Palindrome
+*/
+    </pre>
+</body>
+</html>

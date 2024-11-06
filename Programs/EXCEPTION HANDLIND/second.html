@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class NumberIsOddException extends Throwable{
+            public java.lang.String getMessage(){
+                return "Number is Odd";
+            }
+        }
+        class Main{
+            void isOdd(int num) throws NumberIsOddException{
+                if(num % 2 != 0){
+                    throw new NumberIsOddException();
+                }
+            }
+            public static void main(String[] args){
+                try{
+                    (new Main()).isOdd(23);
+                }
+                catch(NumberIsOddException e){
+                    System.out.println("Exception : " + e.getMessage());	
+                }
+            }
+        }
+          Output
+        Exception : Number is Odd
+    </pre>
+</body>
+</html>

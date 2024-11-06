@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class Main{
+            static boolean isOneMiddle(int a, int b, int c){
+                if(a == (b+c)/2 || b == (a+c)/2 || c == (b+a)/2){
+                    return true;
+                }
+                return false;
+            }
+            public static void main(String[] args){
+                System.out.println((isOneMiddle(10, 100, 55)) ? "Entered numbers contain middle number " : "Numbers does not contain middle number");
+            }
+        }
+          Output
+        Entered numbers contain middle number
+    </pre>
+</body>
+</html>

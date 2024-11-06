@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class Main{
+            static Boolean isPrime(int num){
+                for(int i = 2; i < num; i++){
+                    if(num % i == 0){
+                        return false;
+                    }
+                }
+                return true;
+            }
+            static void twinPrime(){
+                int prevPrime = 0;
+                for(int i = 3; i <= 100; i++){
+                    if(isPrime(i)){
+                        if((i - prevPrime) == 2){
+                            System.out.println(prevPrime + " and " + i + " are twin Prime");
+                        }
+                        prevPrime = i;
+                    }
+                }
+            }
+            public static void main(String[] args){
+                twinPrime();
+            }
+        }
+          Output
+        3 and 5 are twin Prime
+        5 and 7 are twin Prime
+        11 and 13 are twin Prime
+        17 and 19 are twin Prime
+        29 and 31 are twin Prime
+        41 and 43 are twin Prime
+        59 and 61 are twin Prime
+        71 and 73 are twin Prime
+        
+    </pre>
+</body>
+</html>

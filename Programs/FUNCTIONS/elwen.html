@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class Main{
+            static boolean isConsecutive(int a, int b, int c){
+                if(((a+1) == b && (a+2) == c) || (a+1) == c && (a+2) == b){
+                    return true;
+                }
+                else if(((b+1) == a && (b+2) == c) || ((b+1) == c && (b+2) == a)){
+                    return true;
+                }
+                else if(((c+1) == a && (c+2) == b) || (c+1) == b && (c+2) == a){
+                    return true;
+                }
+                return false;
+            }
+            public static void main(String[] args){
+                System.out.println((isConsecutive(9,10,8)) ? "Consecutive Numbers" : "Numbers are not Consecutive");
+            }
+        }
+          Output
+        Consecutive Numbers
+    </pre>
+</body>
+</html>

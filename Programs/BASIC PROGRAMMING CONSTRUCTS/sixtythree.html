@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        import java.util.Scanner;
+        
+        class Check {
+            public static void main(String arg[]) {
+                Scanner obj = new Scanner(System.in);
+                System.out.println("Enter the number: ");
+                int n = obj.nextInt();
+                if (n > 0)
+                    System.out.println("Positive number");
+                else if (n < 0)
+                    System.out.println("Negative number");
+                else if (n == 0)
+                    System.out.println("Zero");
+                else
+                    System.out.println("Not valid character");
+            }
+        }
+        
+
+            
+                
+Output:
+            
+                D:\java_folder\basic_constructs>javac p63.java
+
+                D:\java_folder\basic_constructs>java Check
+                Enter the number:
+                4
+                Positive number
+
+                
+                
+            
+    </pre>
+</body>
+</html>

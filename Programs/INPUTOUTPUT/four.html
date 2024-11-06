@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        import java.util.Scanner;
+
+class Main{
+	public static void main(String[] args){
+		float var = 0.0f;
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter Float Value : ");
+		try{
+			var = sc.nextFloat();
+			System.out.println("Float Entered : " + var);
+		}
+		catch(java.util.InputMismatchException ime){
+			System.out.println("Entered Non Float Value");
+		}
+		catch(Throwable th){
+			System.out.println("Unexpected Error : " + th.getMessage());
+		}
+	}
+}
+  Input
+Enter Float Value : 5055.365
+  Output
+Float Entered : 5055.365
+    </pre>
+</body>
+</html>

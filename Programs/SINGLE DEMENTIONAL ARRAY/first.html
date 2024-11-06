@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class Main{
+            static int[] duplicateArray(int arr[]){
+                int cparr[] = new int[arr.length];
+                for(int i = 0; i < arr.length; i++){
+                    cparr[i] = arr[i];
+                }
+                return cparr;
+            }
+            static void printArray(int arr[]){
+                for(int i = 0; i < arr.length; i++){
+                    System.out.println("Value at " + (i+1) + "position : " + arr[i]);
+                }
+            }
+            public static void main(String args[]){
+                int arr[] = {52, 98, 71, 28, 56};
+                System.out.println("Original Array : ");
+                printArray(arr);
+                int newarr[] = duplicateArray(arr);
+                System.out.println("Duplicated Array : ");
+                printArray(newarr); 
+            }
+        }
+          Output
+        Original Array :
+        Value at 1position : 52
+        Value at 2position : 98
+        Value at 3position : 71
+        Value at 4position : 28
+        Value at 5position : 56
+        Duplicated Array :
+        Value at 1position : 52
+        Value at 2position : 98
+        Value at 3position : 71
+        Value at 4position : 28
+        Value at 5position : 56
+    </pre>
+</body>
+</html>

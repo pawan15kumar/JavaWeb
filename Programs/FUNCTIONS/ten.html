@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class Main{
+            static int numLength(int num){
+                int count = 0;
+                if(num > 0){
+                    while(num > 0){
+                        count++;
+                        num /= 10;
+                    }
+                }
+                return count;
+            }
+            public static void main(String[] args){
+                System.out.println("Number of Digits in 55969 is : " + numLength(55969));
+            }
+        }
+          Output
+        Number of Digits in 55969 is : 5
+    </pre>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class Main{
+            static void printArray(int arr[]){
+                for(int i = 0; i < arr.length; i++){
+                    System.out.println("Value at " + (i+1) + " position : " + arr[i]);
+                }
+            }
+        
+            static void leftRotate(int arr[], int n){
+                n = n % arr.length;
+                for(int i = 0; i < n; i++){
+                    int temp = arr[0];
+                    for(int j = 1; j < arr.length; j++){
+                        arr[j-1] = arr[j];
+                    }
+                    arr[arr.length-1] = temp; 
+                }
+            }
+        
+            public static void main(String[] args){
+                int arr[] = {20,38,17,47,27};
+                System.out.println("Before Left Rotation : ");
+                printArray(arr);
+                System.out.println("After Left Rotation 2 times: ");
+                leftRotate(arr, 2);
+                printArray(arr);
+            }
+        }
+          Output
+        Before Left Rotation :
+        Value at 1 position : 20
+        Value at 2 position : 38
+        Value at 3 position : 17
+        Value at 4 position : 47
+        Value at 5 position : 27
+        After Left Rotation 2 times:
+        Value at 1 position : 17
+        Value at 2 position : 47
+        Value at 3 position : 27
+        Value at 4 position : 20
+        Value at 5 position : 38
+    </pre>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class Main{
+            static void printArray(int arr[]){
+                for(int i = 0; i < arr.length; i++){
+                    System.out.println("Value at " + (i+1) + " position : " + arr[i]);
+                }
+            }
+            static void sortArray(int arr[]){
+                for(int i = 0; i < arr.length; i++){
+                    for(int j = 0; j < (arr.length-i-1); j++){
+                        if(arr[j] > arr[j+1]){
+                            int temp = arr[j];
+                            arr[j] = arr[j+1];
+                            arr[j+1] = temp;
+                        }
+                    }
+                }
+            }
+        
+            static void secondSmallestArrayValue(int arr[]){
+                sortArray(arr);
+                int count = 0;
+        
+                for(int i = 1; i < arr.length; i++){
+                    while(i < arr.length && arr[i-1] == arr[i]){
+                        i++;
+                    }
+                    count++;
+                    if(count == 1 && i < arr.length){
+                        System.out.println("Second Smallest Value of Array : " + arr[i]);
+                        return;
+                    }
+                }
+                System.out.println("Second Smallest Value of Array does not exist");
+            }		
+            public static void main(String[] args){
+                int arr[] = {9, 3, 91, 25, 87};
+                printArray(arr);
+                secondSmallestArrayValue(arr);
+            }
+        }
+          Output
+        Value at 1 position : 9
+        Value at 2 position : 3
+        Value at 3 position : 91
+        Value at 4 position : 25
+        Value at 5 position : 87
+        Second Smallest Value of Array : 9
+    </pre>
+</body>
+</html>

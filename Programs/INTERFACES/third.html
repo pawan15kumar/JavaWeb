@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        interface Flyable {
+            void fly_obj();
+        }
+        
+        class Spacecraft implements Flyable {
+            public void fly_obj() {
+                System.out.println("Spacecraft is flying in space.");
+            }
+        }
+        
+        class Airplane implements Flyable {
+            public void fly_obj() {
+                System.out.println("Airplane is flying in the sky.");
+            }
+        }
+        
+        class Helicopter implements Flyable {
+            public void fly_obj() {
+                System.out.println("Helicopter is flying above the ground.");
+            }
+        }
+        
+        class Main {
+            public static void main(String[] args) {
+                Flyable spacecraft = new Spacecraft();
+                spacecraft.fly_obj();
+        
+                Flyable airplane = new Airplane();
+                airplane.fly_obj();
+        
+                Flyable helicopter = new Helicopter();
+                helicopter.fly_obj();
+            }
+        }
+          Output
+        Spacecraft is flying in space.
+        Airplane is flying in the sky.
+        Helicopter is flying above the ground.
+    </pre>
+</body>
+</html>

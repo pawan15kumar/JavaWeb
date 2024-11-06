@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        import java.util.Scanner;
+        
+        class Power {
+            public static void main(String[] args) {
+                Scanner obj = new Scanner(System.in);
+                System.out.println("Enter the base value:");
+                double b = obj.nextDouble();
+                System.out.println("Enter the power value:");
+                int ex = obj.nextInt();
+        
+                double result = Math.pow(b, ex);
+                System.out.printf(b + " raised to the power of " + ex + " is " + result);
+            }
+        }
+        
+
+            
+                
+Output:
+            
+                D:\java_folder\basic_constructs>java Power
+                Enter the base value:
+                3
+                Enter the power value:
+                2
+                3.0 raised to the power of 2 is 9.0
+
+                
+                
+            
+    </pre>
+</body>
+</html>

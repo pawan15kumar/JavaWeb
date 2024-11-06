@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        import java.util.Scanner;
+        
+        class Check {
+            public static void main(String arg[]) {
+                Scanner obj = new Scanner(System.in);
+                System.out.println("Enter the string: ");
+                String n = obj.nextLine();
+                System.out.println("Enter the starting index of substring: ");
+                int n1 = obj.nextInt();
+                System.out.println("Enter the ending index of substring:");
+                int n2 = obj.nextInt();
+                if (n1 < 0 || n2 > n.length() || n1 > n2)
+                    System.out.println("Invalid indexes");
+                else {
+                    String str = n.substring(n1, n2);
+                    System.out.println("Substring: " + str);
+                }
+                obj.close();
+            }
+        }
+        
+
+            
+                
+Output:
+            
+                D:\java_folder\basic_constructs>java Check
+                Enter the string:
+                hello world
+                Enter the starting index of substring:
+                6
+                Enter the ending index of substring:
+                10
+                Substring: worl
+
+                
+    </pre>
+</body>
+</html>

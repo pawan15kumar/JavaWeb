@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        import java.util.Scanner;
+
+class Main{
+	public static void main(String[] args){
+		short var = 0;
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter Value Between -32768 and 32767 : ");
+		try{
+			var = sc.nextShort();
+			System.out.println("Value Entered: " + var);
+		}
+		catch(java.util.InputMismatchException ime){
+			System.out.println("Entered Wrong Value");
+		}
+		catch(Throwable th){
+			System.out.println("Unexpected Error : " + th.getMessage());
+		}
+	}
+}
+  Input
+Enter Value Between -32768 and 32767 : 23668
+  Output
+Value Entered: 23668
+    </pre>
+</body>
+</html>

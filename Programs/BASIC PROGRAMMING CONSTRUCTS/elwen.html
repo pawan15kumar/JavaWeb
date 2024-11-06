@@ -7,17 +7,44 @@
 </head>
 <body>
     <pre>
-        class Time{
-            public static void main(String st[]){
-                java.time.LocalTime currentTime = java.time.LocalTime.now();
-                System.out.println("System Time : "+currentTime);
+        import java.io.*;
+        
+        class A {
+            static int x;
+            static int y;
+        
+            public static void main(String args[]) throws java.io.IOException {
+                InputStreamReader obj = new InputStreamReader(System.in);
+                BufferedReader a = new BufferedReader(obj);
+                System.out.println("Enter the two numbers: ");
+                x = Integer.parseInt(a.readLine());
+                y = Integer.parseInt(a.readLine());
+                if (x > y)
+                    System.out.println(x + " is greater than " + y);
+                else if (x == y)
+                    System.out.println(x + " and " + y + " both are same");
+                else
+                    System.out.println(y + " is greater than " + x);
         
             }
         }
-    
-    Output:
-    
-    System Time : 19:23:06.762055800
+        
+
+            
+                
+Output:
+            
+                D:\java_folder\basic_constructs>javac b11.java
+
+                D:\java_folder\basic_constructs>java A
+                Enter the two numbers:
+                4
+                6
+                6 is greater than 4
+
+                
+                
+            
     </pre>
 </body>
 </html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        import java.io.*;
+        
+        class A {
+            public static void main(String s[]) throws java.io.IOException {
+                InputStreamReader isr = new InputStreamReader(System.in);
+                BufferedReader obj = new BufferedReader(isr);
+                System.out.print("Enter the month:");
+                String month = obj.readLine().toLowerCase();
+        
+                if (month.equals("january") || month.equals("march") || month.equals("may") || month.equals("july")
+                        || month.equals("august") || month.equals("october") || month.equals("december"))
+                    System.out.println("31 days");
+                else if (month.equals("february"))
+                    System.out.println("28 or 29 days");
+                else
+                    System.out.println("30 days");
+            }
+        }
+        
+
+            
+                
+Output:
+            
+                D:\java4231>javac bpc53.java
+
+                D:\java4231>java A
+                Enter the month:july
+                31 days
+
+                
+                
+            
+    </pre>
+</body>
+</html>

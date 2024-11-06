@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class Main{
+            static void printOddFromArray(int arr[]){
+                System.out.println("Odd Values of array : ");
+                for(int i = 0; i < arr.length; i++){
+                    if(arr[i] % 2 != 0)
+                        System.out.println("Value at " + (i+1) + " position : " + arr[i]);
+                }
+            }
+            static void printEvenFromArray(int arr[]){
+                System.out.println("Even Values of array : ");
+                for(int i = 0; i < arr.length; i++){
+                    if(arr[i] % 2 == 0)
+                        System.out.println("Value at " + (i+1) + " position : " + arr[i]);
+                }
+            }
+            static void printArray(int arr[]){
+                for(int i = 0; i < arr.length; i++){
+                    System.out.println("Value at " + (i+1) + " position : " + arr[i]);
+                }
+            }
+        
+            public static void main(String[] args){
+                int arr[] = {83, 42, 28, 27, 23};
+                printArray(arr);
+                printOddFromArray(arr);
+                printEvenFromArray(arr);
+            }
+        }
+          Output
+        Value at 1 position : 83
+        Value at 2 position : 42
+        Value at 3 position : 28
+        Value at 4 position : 27
+        Value at 5 position : 23
+        Odd Values of array :
+        Value at 1 position : 83
+        Value at 4 position : 27
+        Value at 5 position : 23
+        Even Values of array :
+        Value at 2 position : 42
+        Value at 3 position : 28
+    </pre>
+</body>
+</html>

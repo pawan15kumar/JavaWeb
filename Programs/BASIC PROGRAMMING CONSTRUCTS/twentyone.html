@@ -7,27 +7,37 @@
 </head>
 <body>
     <pre>
-        class Main{
-            static int[] swapAndCreate(int arr[]){
-                int[] newarr = new int[arr.length];
-                newarr[0] = arr[arr.length-1];
-                newarr[arr.length-1] = arr[0];
-                for(int i = 1; i < arr.length-1; i++){
-                    newarr[i] = arr[i];
-                }
-                return newarr;
-            }
-            public static void main(String[] args){
-                int arr[] = {52, 74, 10, 53, 58};
-                int newarr[] = new int[arr.length];
-                newarr = swapAndCreate(arr);
-                System.out.println("Original Array : " + java.util.Arrays.toString(arr));
-                System.out.println("New Created Array : " + java.util.Arrays.toString(newarr));
+        class A {
+            static int x[] = { 1, 2, 3, 4, 5 };
+        
+            public static void main(String args[]) {
+                int first = x[0];
+                int last = x[(x.length - 1)];
+                System.out.println("Original array");
+                for (int i = 0; i < x.length; i++)
+                    System.out.print(x[i] + " ");
+                x[0] = last;
+                x[(x.length - 1)] = first;
+                System.out.println("\n Changed array");
+                for (int i = 0; i < x.length; i++)
+                    System.out.print(x[i] + " ");
             }
         }
-        output
-        Original Array : [52, 74, 10, 53, 58]
-New Created Array : [58, 74, 10, 53, 52]
+        
+
+            
+                
+Output:
+            
+                D:\java4231>javac bpc21.java
+    
+                D:\java4231>java A
+                Original array
+                1 2 3 4 5
+                 Changed array
+                5 2 3 4 1
+
+                
     </pre>
 </body>
 </html>

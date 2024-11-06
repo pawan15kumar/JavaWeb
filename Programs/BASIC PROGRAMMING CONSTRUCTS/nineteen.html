@@ -7,21 +7,38 @@
 </head>
 <body>
     <pre>
-        class AddDigits{
-            public static void main(String st[]){
-                int num = 345;
-                int sum=0;
-                while(num != 0){
-                    sum += num % 10;
-                    num /= 10;
-                }
+        import java.io.*;
+        class Convert{
+            public static void main(String arg[]) throws IOException {
+              InputStreamReader isr=new InputStreamReader(System.in);
+              BufferedReader br=new BufferedReader(isr);
+                System.out.print("Enter the number of seconds: ");
+                long tSec =Integer.parseInt(br.readLine());
+        
                 
-                System.out.println("Sum of digits : "+ sum);	
+                long hours = tSec / 3600;
+                long minutes = (tSec % 3600) / 60;
+                long seconds = tSec % 60;
+        
+                System.out.printf(tSec+" seconds is equivalent to "+ hours + " hours "+minutes+" minutes "+ seconds+" seconds.");
+        
+              
             }
         }
-    Output:
-    
-    Sum of digits : 12
+
+            
+                
+Output:
+            
+                D:\java_folder\basic_constructs>java Convert
+                Enter the number of seconds: 3662
+                3662 seconds is equivalent to 1 hours 1 minutes 2 seconds.
+                D:\java_folder\basic_constructs>
+                
+
+                
+                
+            
     </pre>
 </body>
 </html>

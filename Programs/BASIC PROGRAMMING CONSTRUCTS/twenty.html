@@ -7,26 +7,35 @@
 </head>
 <body>
     <pre>
-        class AreaOfCircle{
-            double radius;
-            double area;
-            AreaOfCircle(int r){
-                radius = r;
-            }
-            double areaOfCircle(){
-                return 3.14*radius*radius;
-            }
-        }
-        
         class Main{
-            public static void main(String st[]){
-                AreaOfCircle circle = new AreaOfCircle(5);
-                System.out.println("Area of Circle : "+circle.areaOfCircle());
+            static Boolean isPrime(int num){
+                int i = 0;
+                if(num == 2)
+                    return true;
+                for(i = 2; i < num; i++){
+                    if(num%i == 0){
+                        return false;
+                    }
+                }
+                if(i == num)
+                    return true;
+                else
+                    return false;
+            }
+            public static void main(String[] args){
+                int sum = 0;
+                int count = 0;
+                for(int i = 2; count < 100; i++){
+                    if(isPrime(i)){
+                        sum += i;
+                        count++;
+                    }
+                }
+                System.out.println("Sum of first 100 Prime Numbers : " + sum);
             }
         }
-    Output:
-    
-    Area of Circle : 78.5
+          Output
+        Sum of first 100 Prime Numbers : 24133  
     </pre>
 </body>
 </html>

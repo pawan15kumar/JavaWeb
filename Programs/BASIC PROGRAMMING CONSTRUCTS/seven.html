@@ -7,25 +7,22 @@
 </head>
 <body>
     <pre>
-        class CompareNum{
-            public static void main(String st[]){
-                int num1 = 10;
-                int num2 = 20;
-                if(num1>num2){
-                    System.out.println(num1 + " is greater than "+num2);
+        class Main{
+            public static void main(String[] args){
+                int num = 9, j = 0;
+                short arr[] = new short[10];
+                while(num > 0){
+                    arr[j] = (short)(num % 2);
+                    num /= 2;
+                    j++;
                 }
-                else if(num1 < num2){
-                    System.out.println(num1 + " is less than "+num2);
-                }
-                else{
-                    System.out.println(num1 + " is equal to "+num2);
-                }
+                for(int i = arr.length-1; i >= 0; i--){
+                    System.out.print(arr[i]);
+                }		 
             }
         }
-    
-    Output:
-    
-    10 is less than 20 
+          Output
+        0000001001
     </pre>
 </body>
 </html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        import java.io.*;
+        
+        class A {
+            public static void main(String args[]) throws IOException {
+                InputStreamReader isr = new InputStreamReader(System.in);
+                BufferedReader obj = new BufferedReader(isr);
+                System.out.print("Enter the string:");
+                String str = obj.readLine();
+                System.out.print("Enter the index:");
+                int str2 = Integer.parseInt(obj.readLine());
+        
+                char a = str.charAt(str2);
+                System.out.println("\n" + a);
+            }
+        }
+        
+
+            
+                
+Output:
+            
+                Enter the string:hello
+                Enter the index:2
+                
+                l
+
+    </pre>
+</body>
+</html>

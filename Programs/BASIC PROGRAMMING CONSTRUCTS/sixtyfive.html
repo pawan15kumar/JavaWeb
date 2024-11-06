@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        import java.util.Scanner;
+        
+        class Check {
+            public static void main(String arg[]) {
+                Scanner scanner = new Scanner(System.in);
+                
+                System.out.print("Enter the first number: ");
+                int num1 = scanner.nextInt();
+                
+                System.out.print("Enter the second number: ");
+                int num2 = scanner.nextInt();
+                
+                System.out.print("Enter the third number: ");
+                int num3 = scanner.nextInt();
+                
+           
+                if (num1 == num2 && num2 == num3) {
+                    System.out.println("All numbers are equal.");
+                } else {
+                    System.out.println("All numbers are not equal.");
+                }
+                
+                scanner.close(); 
+            }
+        }
+        
+        
+
+            
+                
+Output:
+            
+                D:\java_folder\basic_constructs>javac b65.java
+
+                D:\java_folder\basic_constructs>java Check
+                Enter the first number: 34
+                Enter the second number: 34
+                Enter the third number: 34
+                All numbers are equal.
+                
+                
+                D:\java_folder\basic_constructs>java Check
+                Enter the first number: 34
+                Enter the second number: 23
+                Enter the third number: 12
+                All numbers are not equal.
+
+                
+    </pre>
+</body>
+</html>

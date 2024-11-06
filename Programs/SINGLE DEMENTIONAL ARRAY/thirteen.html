@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class Main{
+            static void printArray(int arr[]){
+                for(int i = 0; i < arr.length; i++){
+                    System.out.println("Value at " + (i+1) + " position : " + arr[i]);
+                }
+            }
+        
+            static void rightRotate(int arr[], int n){
+                n = n % arr.length;
+                for(int i = 0; i < n; i++){
+                    int temp = arr[arr.length-1];
+                    for(int j = arr.length-1; j >= 1; j--){
+                        arr[j] = arr[j-1];
+                    }
+                    arr[0] = temp; 
+                }
+            }
+        
+            public static void main(String[] args){
+                int arr[] = {1,3,5,7,9};
+                System.out.println("Before Right Rotation : ");
+                printArray(arr);
+                System.out.println("After Right Rotation 2 times: ");
+                rightRotate(arr, 2);
+                printArray(arr);
+            }
+        }
+          Output
+        Before Right Rotation :
+        Value at 1 position : 1
+        Value at 2 position : 3
+        Value at 3 position : 5
+        Value at 4 position : 7
+        Value at 5 position : 9
+        After Right Rotation 2 times:
+        Value at 1 position : 7
+        Value at 2 position : 9
+        Value at 3 position : 1
+        Value at 4 position : 3
+        Value at 5 position : 5
+    </pre>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class Main{
+            static double getFutureValue(double amt, double roi, int time){
+                double fv = amt*Math.pow((1+(roi/100)), time);
+                return fv;
+            }
+            public static void main(String[] args){
+                System.out.println("Amount = 10000");
+                System.out.println("Rate of Interest = 10");
+                System.out.println("Years = 5");
+                System.out.printf("Your Future Value is %.2f" , getFutureValue(10000.0, 10.0, 5));
+            }
+        }
+          Output
+        Amount = 10000
+        Rate of Interest = 10
+        Years = 5
+        Your Future Value is 16105.10
+    </pre>
+</body>
+</html>

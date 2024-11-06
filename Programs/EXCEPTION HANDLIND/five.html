@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class EmptyFileException extends Throwable{
+            public String getMessage(){
+                return "File Is Empty Exception";
+            }
+        }
+        
+        class Main{
+            static void readFile() throws java.io.FileNotFoundException, EmptyFileException, java.io.IOException{
+                java.io.InputStreamReader isr = new java.io.FileReader("my.txt");
+                if(isr.read() == -1){
+                    throw new EmptyFileException();
+                }	
+            }
+            public static void main(String[] args){
+                try{
+                    readFile();
+                }
+                catch(EmptyFileException e){
+                    System.out.println(e.getMessage());
+                }
+                catch(Throwable e){
+                    System.out.println(e.getMessage());
+                }
+            }
+        }
+          Input
+        my.txt file with empty content
+          Output
+        File Is Empty Exception
+    </pre>
+</body>
+</html>

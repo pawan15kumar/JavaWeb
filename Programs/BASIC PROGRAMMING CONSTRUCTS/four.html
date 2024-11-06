@@ -7,50 +7,55 @@
 </head>
 <body>
     <pre>
-        class operations{
-            private int Num1, Num2;    
-            operations(int n1, int n2){
-                Num1 = n1;
-                Num2 = n2;
-                System.out.println("The value of Num1 = "+Num1);
-                System.out.println("The value of Num2 = "+Num2);
+        class A {
+            int product(int a, int b) {
+                return a * b;
             }
-            int sum(){
-                return Num1 + Num2;
+        
+            int sum(int a, int b) {
+                return a + b;
             }
-            int multiply(){
-                return Num1 * Num2;
+        
+            int subtract(int a, int b) {
+                return a - b;
             }
-            int subtract(){
-                return Num1 - Num2;
+        
+            int remainder(int a, int b) {
+                return a % b;
             }
-            int divide(){
-                return Num1/Num2 ;
+        
+            int divide(int a, int b) {
+                return a / b;
             }
-            int remainder(){
-                return Num1%Num2;
-            }
-        }
-        class Main{
-            public static void main(String args[]){
-                operations operation = new operations(3,2);
-                System.out.println("Sum of Num1 and Num2 = "+operation.sum());
-                System.out.println("Product of Num1 and Num2 = "+operation.multiply());
-                System.out.println("Difference of Num1 and Num2 = "+operation.subtract());
-                System.out.println("Quotient of Num1 and Num2 = "+operation.divide());
-                System.out.println("Remainder of Num1 and Num2 = "+operation.remainder());
+        
+            public static void main(String x[]) {
+                A obj = new A();
+                System.out.println("Sum of two numbers" + "   " + obj.sum(14, 31));
+                System.out.println("Difference of two numbers" + "   " + obj.subtract(14, 31));
+                System.out.println("Product of two numbers" + "   " + obj.product(14, 31));
+                System.out.println("Remainder of two numbers" + "   " + obj.remainder(14, 31));
+                System.out.println("Division of two numbers" + "   " + obj.divide(14, 31));
+        
             }
         }
-    
-    Output:
-    
-    The value of Num1 = 3
-    The value of Num2 = 2
-    Sum of Num1 and Num2 = 5
-    Product of Num1 and Num2 = 6
-    Difference of Num1 and Num2 = 1
-    Quotient of Num1 and Num2 = 1
-    Remainder of Num1 and Num2 = 1
+        
+
+            
+                
+Output:
+            
+                D:\java_folder\basic_constructs>javac b4.java
+
+                D:\java_folder\basic_constructs>java A
+                Sum of two numbers   45
+                Difference of two numbers   -17
+                Product of two numbers   434
+                Remainder of two numbers   14
+                Division of two numbers   0
+
+                
+                
+            
     </pre>
 </body>
 </html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class DoesNotHaveVowelException extends Throwable{
+            public String getMessage(){
+                return "String Doesn't contain vowels";
+            }
+        }
+        class Main{
+            static void readValues() throws java.io.IOException, DoesNotHaveVowelException{
+                java.io.BufferedReader br = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));
+                String str = br.readLine();	
+                boolean containvowel = false;
+                for(int i = 0; i < str.length(); i++){
+                    if(str.contains("A") || str.contains("a") || str.contains("E") || str.contains("e") || str.contains("I") || str.contains("i") || str.contains("O") || str.contains("o") ||  str.contains("U") || str.contains("u")){
+                    containvowel = true;
+                    }
+                }
+                if(!containvowel){
+                    throw (new DoesNotHaveVowelException());
+                }
+            }
+            public static void main(String[] args){
+                try{
+                    Main.readValues();
+                }
+                catch(Throwable th){
+                    System.out.println(th.getMessage());
+                }
+            }
+        }
+          Input
+        hggh
+          Output
+        String Doesn't contain vowels
+    </pre>
+</body>
+</html>

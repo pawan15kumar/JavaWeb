@@ -7,27 +7,23 @@
 </head>
 <body>
     <pre>
-        class Main{
-            static boolean isPallindrome(int num){
-                int rev = 0, n = num;
-                while(num > 0){
-                    rev = (num%10) + (rev*10);
-                    num /= 10;
-                }
-                return (rev == n) ? true : false;
-            }
-            public static void main(String args[]){
-                int num = 12221;
-                if(isPallindrome(num)){
-                    System.out.println(num + " is Pallindrome");
-                }
-                else{
-                    System.out.println(num + " is not Pallindrome");
-                }
+        class A {
+            public static void main(String args[]) {
+                int r = 9;
+                System.out.println("volume of sphere: " + (4 * 3.14 * r * r * r) / 3);
             }
         }
-          Output
-        12221 is Pallindrome
+
+            
+                
+Output:
+              
+                D:\java4231>javac bpc34.java
+    
+                D:\java4231>java A
+                volume of sphere: 3052.08
+
+
     </pre>
 </body>
 </html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        import java.sql.*;
+        
+        class A {
+            public static void main(String s[]) throws java.lang.ClassNotFoundException, SQLException {
+        
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                Connection c1 = DriverManager.getConnection("jdbc:mysql://localhost:3306/examination", "root", "root");
+                Statement st = c1.createStatement();
+                System.out.println(st.executeUpdate("delete from student where rollno =1"));
+                c1.close();
+        
+            }
+        }
+        
+
+            
+                
+Output:
+            
+                D:\java_folder\jbbc>javac jdbc5.java
+
+                D:\java_folder\jbbc>java -cp "C:\mysql-connector-j-8.0.33;D:\java_folder\jbbc;" A
+                2
+
+                
+                
+            
+    </pre>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class Main{
+            static char[] midChar(String str){
+                int len = str.length();
+                if(len % 2 == 0){
+                    len /= 2;
+                    char[] arr = {str.charAt(len)};
+                    return arr;
+                }
+                else{
+                    len /= 2;
+                    char[] arr = {str.charAt(len), str.charAt(len+1)};
+                    return arr;
+                }
+            }
+            public static void main(String[] args){
+                char arr[];
+                arr = midChar("hellow");
+                if(arr.length == 1){
+                     System.out.println("Middle Character = " + arr[0]);
+                }
+                else{
+                    System.out.println("Middle Character = " + arr[0] + " and " + arr[1]);
+                } 
+            }
+        }
+          Output
+        Middle Character = l and o
+    </pre>
+</body>
+</html>

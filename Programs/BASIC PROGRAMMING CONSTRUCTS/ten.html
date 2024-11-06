@@ -7,23 +7,39 @@
 </head>
 <body>
     <pre>
-        class Main{
-            public static void main(String st[]){
-                java.util.Scanner scanner = new java.util.Scanner(System.in);
-                System.out.print("Enter an integer : ");
-                int n = scanner.nextInt();
-        
-                int nn = n * 10 + n;
-                int nnn = n * 100 + n * 10 + n;
-                int result = n + nn + nnn;
-                System.out.println("n+nn+nnn : " + result);
-            }
+        import java.io.*;
+         class A {
+            public static void main(String arg[]) throws IOException{
+        int sum=0;
+              InputStreamReader isr=new InputStreamReader(System.in);
+        BufferedReader br=new BufferedReader(isr);
+               
+                System.out.print("Enter number: ");
+             int a=Integer.parseInt(br.readLine());
+        while(a>0){
+        sum=sum+(a%10);
+        a=a/10;
         }
-    
-    Output:
-    
-    Enter an integer : 4
-    n+nn+nnn : 492
+        System.out.print("Sum of numbers: "+ sum);
+        }
+        }
+
+            
+                
+Output:
+            
+                D:\java_folder\basic_constructs>javac b10.java
+
+                D:\java_folder\basic_constructs>java A
+                Enter number: 45
+                Sum of numbers: 9
+                D:\java_folder\basic_constructs>java A
+                Enter number: 343
+                Sum of numbers: 10
+
+                
+                
+            
     </pre>
 </body>
 </html>

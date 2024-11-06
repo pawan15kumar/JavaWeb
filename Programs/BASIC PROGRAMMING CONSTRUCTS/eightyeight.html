@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class PrintArray {
+            static void reverse(int arr[], int start, int end) {
+                while (start < end) {
+                    int temp = arr[start];
+                    arr[start] = arr[end];
+                    arr[end] = temp;
+                    start++;
+                    end--;
+                }
+            }
+        
+            static void print(int arr1[]) {
+                int size = arr1.length;
+                for (int i = 0; i < size; i++) {
+                    System.out.print(arr1[i] + " ");
+                }
+            }
+        
+            public static void main(String s[]) {
+                int arr[] = { 2, 4, 6, 8, 10, 12, 14 };
+                System.out.println("Reversed array:");
+                reverse(arr, 0, (arr.length - 1));
+                print(arr);
+            }
+        
+        }
+
+            
+                
+Output:
+        Output:
+            D:\java_folder\array>javac arr6.java
+            
+            D:\java_folder\array>java PrintArray
+            Reversed array:
+            14 12 10 8 6 4 2
+            
+
+    </pre>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        import java.util.Scanner;
+        
+        class Cube {
+            public static void main(String arg[]) {
+                Scanner obj = new Scanner(System.in);
+                System.out.println("Enter the number: ");
+                int n = obj.nextInt();
+                for (int i = 0; i <= n; i++) {
+                    System.out.println("Cube of " + i + " is: " + i * i * i);
+                }
+            }
+        }
+        
+
+            
+                
+Output:
+            
+                D:\java_folder\basic_constructs>javac b60.java
+
+                D:\java_folder\basic_constructs>java Cube
+                Enter the number:
+                4
+                Cube of 0 is: 0
+                Cube of 1 is: 1
+                Cube of 2 is: 8
+                Cube of 3 is: 27
+                Cube of 4 is: 64
+                
+
+    </pre>
+</body>
+</html>

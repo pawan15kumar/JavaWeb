@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+
+    
+    import java.io.*;
+        
+        class A {
+            public static void main(String[] args) throws IOException {
+                BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        
+                System.out.print("Enter a number: ");
+                int number = Integer.parseInt(reader.readLine());
+        
+                int factorial = 1;
+                for (int i = 1; i <= number; i++) {
+                    factorial *= i;
+                }
+        
+                System.out.println("Factorial of " + number + " is: " + factorial);
+            }
+        }
+        
+
+            
+                
+Output:
+            
+                F:\JAVA>javac bpc109.java
+
+                F:\JAVA>java A
+                Enter a number: 5
+                Factorial of 5 is: 120
+
+            </pre>      
+                
+</body>
+</html>

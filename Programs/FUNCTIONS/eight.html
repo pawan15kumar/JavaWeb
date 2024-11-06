@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class MyDateClass{
+            java.util.Date obj = new java.util.Date();
+            static void printDateAndTime(){
+                java.util.Date obj = new java.util.Date();
+                System.out.println("Date : "+obj.getDate()+"/"+obj.getMonth()+"/"+(obj.getYear()+1900));
+                System.out.println("Time : "+obj.getHours()+"H:"+obj.getMinutes()+"M:"+obj.getSeconds()+"S");
+            }
+            public static void main(String args[]){
+                printDateAndTime();
+            }
+        
+        }
+          Output
+        Date : 16/9/2024
+        Time : 23H:18M:48S
+    </pre>
+</body>
+</html>

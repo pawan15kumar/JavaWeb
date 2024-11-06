@@ -7,25 +7,34 @@
 </head>
 <body>
     <pre>
-        class CompareNum{
-            public static void main(String st[]){
-                int num1 = 10;
-                int num2 = 20;
-                if(num1>num2){
-                    System.out.println(num1 + " is greater than "+num2);
+        class BinaryToDecimal {
+            public static void main(String[] args) {
+                String binaryString = "1011"; 
+                int decimal = 0;
+                int base = 1;
+                boolean isValid = true;
+        
+                for (int i = binaryString.length() - 1; i >= 0; i--) {
+                    char bit = binaryString.charAt(i);
+                    if (bit == '1') {
+                        decimal += base;
+                    } else if (bit == '0') {
+                        
+                    } else {
+                        System.out.println("Invalid binary number.");
+                        isValid = false;
+                        break;
+                    }
+                    base *= 2; 
                 }
-                else if(num1 < num2){
-                    System.out.println(num1 + " is less than "+num2);
-                }
-                else{
-                    System.out.println(num1 + " is equal to "+num2);
+        
+                if (isValid) {
+                    System.out.println("The decimal of " + binaryString + " is: " + decimal);
                 }
             }
         }
-    
-    Output:
-    
-    10 is less than 20
+          Output
+        The decimal of 1011 is: 11  
     </pre>
 </body>
 </html>

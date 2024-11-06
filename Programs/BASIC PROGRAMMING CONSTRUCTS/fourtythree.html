@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        import java.util.Scanner;
+        
+        class sum {
+            public static void main(String[] args) {
+                int sum = 0;
+                Scanner obj = new Scanner(System.in);
+                System.out.print("How many numbers you want to print:");
+                int n = obj.nextInt();
+                for (int i = 1; i <= n; i++) {
+                    sum = sum + i;
+        
+                }
+                System.out.print("The sum of " + n + " numbers is " + sum);
+        
+                obj.close();
+            }
+        }
+        
+
+            
+                
+Output:
+            
+                D:\java_folder\basic_constructs>java sum
+                How many numbers you want to print:5
+                The sum of 5 numbers is 15
+
+                
+                
+            
+    </pre>
+</body>
+</html>

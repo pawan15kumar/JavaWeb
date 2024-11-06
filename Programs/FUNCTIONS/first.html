@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class Main{
+            static int minOfThree(int x, int y, int z){
+                if(x < y){
+                    if(x < z){
+                        return x;
+                    }
+                    else{
+                        return z;
+                    }
+                }
+                else{
+                    if(y < z){
+                        return y;
+                    }
+                    else{
+                        return z;
+                    }
+                }
+            }
+            public static void main(String[] args){	
+                System.out.println("Minimum value of 105, 9, 209 is " + minOfThree(105,9,209));
+            }
+        }
+          Output
+        Minimum value of 105, 9, 209 is 9
+    </pre>
+</body>
+</html>

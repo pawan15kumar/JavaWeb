@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        interface Searchable{
+            boolean search(String keyword);
+        }
+        class Document implements Searchable{
+            String content, filename;
+            Document(String name, String filecontent){
+                filename = name;
+                content = filecontent;
+            }
+            public boolean search(String keyword){
+                System.out.println("Searching " + keyword + " in " + filename);
+                return content.contains(keyword);
+            }
+        }
+        class WebPage implements Searchable{
+            String content, url;
+            WebPage(String pageurl, String filecontent){
+                url = pageurl;
+                content = filecontent;
+            }
+            public boolean search(String keyword){
+                System.out.println("Searching " + keyword + " in " + url);
+                return content.contains(keyword);
+            }
+        }
+        
+        class Main{
+            public static void main(String[] args){
+                Searchable obj = new Document("my.txt", "Hello I am Abhishek");
+                System.out.println(obj.search("Hello") ? "Document contain Hello" : "Document does not contain Hello");
+                System.out.println(obj.search("No") ? "Document contain No" : "Document does not contain No");
+                obj = new WebPage("my.html", "Trees are very important aspect for our life ...");
+                System.out.println(obj.search("life") ? "Webpage contain life" : "Webpage does not contain life");
+                System.out.println(obj.search("No") ? "Webpage contain No" : "Webpage does not contain No");
+            }
+        }
+          Output
+        Searching Hello in my.txt
+        Document contain Hello
+        Searching No in my.txt
+        Document does not contain No
+        Searching life in my.html
+        Webpage contain life
+        Searching No in my.html
+        Webpage does not contain No
+    </pre>
+</body>
+</html>

@@ -7,28 +7,30 @@
 </head>
 <body>
    <pre>
-    class EvenNum{
-        public static void main(String st[]){
-            for(int i = 1; i<=20; i++){
-                if(i % 2 == 0){
-                    System.out.println(i);
-                }
+    import java.io.*;
+        
+        class Abc {
+            public static void main(String s[]) throws java.io.IOException {
+                InputStreamReader isr = new InputStreamReader(System.in);
+                int st = isr.read();
+                System.out.println("The ascii value of character " + st);
+        
             }
         }
-    }
 
+            
+                
 Output:
+            
+                D:\java4231>javac bpc13.java
 
-2
-4
-6
-8
-10
-12
-14
-16
-18
-20
+                D:\java4231>java Abc
+                a
+                The ascii value of character 97
+
+                
+                
+            
    </pre> 
 </body>
 </html>

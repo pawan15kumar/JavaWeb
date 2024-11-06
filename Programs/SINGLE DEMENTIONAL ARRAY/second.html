@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class Main{
+            public static void main(String args[]){
+                int arr[] = {6,2,9,3,6,2};
+        
+                java.util.List uniquearr = new java.util.ArrayList<>();
+                java.util.List freq = new java.util.ArrayList<>();
+        
+                for(int i = 0; i < arr.length; i++){
+                    if(uniquearr.isEmpty() || !uniquearr.contains(arr[i])){
+                        uniquearr.add(arr[i]);
+                        freq.add(1);
+                    }
+                    else if(uniquearr.contains(arr[i])){
+                        freq.add(uniquearr.indexOf(arr[i]), (freq.get(uniquearr.indexOf(arr[i]))+1));
+                    }
+                }
+                for(int i = 0; i < uniquearr.size(); i++){
+                    System.out.println(uniquearr.get(i) + " occurred " + freq.get(i) + " Times");
+                }
+            }
+        }
+          Output
+        6 occurred 2 Times
+        2 occurred 2 Times
+        9 occurred 1 Times
+        3 occurred 1 Times
+    </pre>
+</body>
+</html>

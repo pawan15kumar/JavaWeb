@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        import java.sql.*;
+        
+        class A {
+            public static void main(String x[]) throws ClassNotFoundException, SQLException {
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                Connection c = DriverManager.getConnection("jdbc:mysql://localhost:3306/student", "root", "root");// throws sql
+                                                                                                                  // exception
+                Statement st = c.createStatement();
+                ResultSet rs = st.executeQuery("Select * from stu");
+                while (rs.next()) {
+                    System.out.println(rs.getInt(2) + "   " + rs.getString(1));
+                }
+                c.close();
+            }
+        }
+        
+
+            
+                
+Output:
+            
+                D:\java_folder\jbbc>javac jdbc3.java
+
+                D:\java_folder\jbbc>java -cp "C:\mysql-connector-j-8.0.33;D:\java_folder\jbbc;" A
+                4   ram
+                2   Sham
+                4   Rita
+                2   lkj
+
+                
+    </pre>
+</body>
+</html>

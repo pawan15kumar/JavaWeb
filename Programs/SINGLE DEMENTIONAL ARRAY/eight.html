@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        class Main{
+            static void printArrayValueAtOdd(int arr[]){
+                for(int i = 0; i < arr.length; i += 2){
+                    System.out.println("Value at " + (i+1) + " position : " + arr[i]);
+                }
+            }
+        
+            public static void main(String[] args){
+                int arr[] = {83, 49, 289, 27, 23};
+                printArrayValueAtOdd(arr);
+            }
+        }
+          Output
+        Value at 1 position : 83
+        Value at 3 position : 289
+        Value at 5 position : 23
+    </pre>
+</body>
+</html>

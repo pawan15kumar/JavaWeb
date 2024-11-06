@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        interface Sortable{
+            void sort(int arr[]);
+        }
+        class BubbleSort implements Sortable{
+            public void sort(int arr[]){
+                System.out.println("Bubble Sort Implemented");
+                for(int i = 0; i < arr.length; i++){
+                    for(int j = 0; j < (arr.length-i-1); j++){
+                        if(arr[j] > arr[j+1]){
+                            int temp = arr[j];
+                            arr[j] = arr[j+1];
+                            arr[j+1] = temp;
+                        }
+                    }
+                }
+            }
+        }
+        class SelectionSort implements Sortable{
+            public void sort(int arr[]){
+                System.out.println("Selection Sort Implemented");
+                for(int i = 0; i < arr.length; i++){
+                    for(int j = i+1; j < arr.length; j++){
+                        if(arr[i] > arr[j]){
+                            int temp = arr[i];
+                            arr[i] = arr[j];								arr[j] = temp;
+                        }
+                    }
+                }
+            }
+        }
+        
+        class Main{
+            public static void main(String args[]){
+                Sortable sr = new BubbleSort();
+                int arr[] = {58, 4, 11, 26, 49, 98, 37};
+                int arr2[] = {105, 85, 71, 526, 76, 20};
+                System.out.println("Array 1 : " + java.util.Arrays.toString(arr));
+                sr.sort(arr);
+                    System.out.println("Bubble Sort : " + java.util.Arrays.toString(arr));
+                sr = new SelectionSort();
+                System.out.println("Array 2 : " + java.util.Arrays.toString(arr2));
+                sr.sort(arr2);
+                    System.out.println("Selection Sort : " + java.util.Arrays.toString(arr2));
+            }
+        }
+          Output
+        Array 1 : [58, 4, 11, 26, 49, 98, 37]
+        Bubble Sort Implemented
+        Bubble Sort : [4, 11, 26, 37, 49, 58, 98]
+        Array 2 : [105, 85, 71, 526, 76, 20]
+        Selection Sort Implemented
+        Selection Sort : [20, 71, 76, 85, 105, 526]
+    </pre>
+</body>
+</html>

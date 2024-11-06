@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        interface Resizable{
+            int resizeWidth(int width);
+            int resizeHeight(int height);
+            void display();
+        }
+        class Rectangle implements Resizable{
+            int length, breadth;
+            Rectangle(int width, int height){
+                breadth = width;
+                length = height;
+            }
+            public void display(){
+                System.out.println("Height of Rectangle : " + length);
+                System.out.println("Width of Rectangle : " + breadth);
+            }
+            public int resizeWidth(int width){
+                breadth = width;
+                return breadth;
+            }
+            public int resizeHeight(int height){
+                length = height;
+                return length;
+            }
+        }
+        class Main{
+            public static void main(String[] args){
+                Resizable obj = new Rectangle(15, 5);
+                System.out.println("Initial Dimensions : ");
+                obj.display();
+                obj.resizeWidth(25);
+                obj.resizeHeight(10);
+                System.out.println("Dimensions After Resizing: ");
+                obj.display();
+            }
+        }
+          Output
+        Initial Dimensions :
+        Height of Rectangle : 5
+        Width of Rectangle : 15
+        Dimensions After Resizing:
+        Height of Rectangle : 10
+        Width of Rectangle : 25
+    </pre>
+</body>
+</html>

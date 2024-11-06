@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        interface Account{
+            boolean deposit(double amt);
+            boolean withdraw(double amt);
+            double calcInterest();
+            void viewBalance();
+        }
+        class Bank{
+            java.util.List accnts;
+            Bank(){
+                accnts = new java.util.ArrayList<>();
+            }
+            boolean addAccount(Account obj){
+                return accnts.add(obj);
+            }
+        }
+        class SavingAccount implements Account{
+            double balance;
+            int limit = 80000;
+            public boolean deposit(double amt){
+                if(amt <= 0){
+                    System.out.println("Amount Should be greater than 0");
+                    return false;
+                }
+                else{
+                    balance += amt;
+                    System.out.println(amt + " Deposited Successfully");
+                    viewBalance();
+                    return true;
+                }
+            }
+            public boolean withdraw(double amt){
+                if(amt <= 0){
+                    System.out.println("Amount Should be greater than 0");
+                    return false;
+                }
+                else if(amt > limit){
+                    System.out.println("Your Withdrawl Limit is " + limit);
+                    return false;
+                }
+                else if((balance-amt) < 0){
+                    System.out.println("Insufficient Balance in account");
+                    viewBalance();
+                    return false;
+                }
+                else{
+                    balance -= amt;
+                    System.out.println(amt + " Withdrawl Successfully");
+                    viewBalance();
+                    return true;
+                }
+            }
+            public double calcInterest(){
+                return (0.03 * balance);
+            }
+            public void viewBalance(){
+                System.out.println("Account Balance : " + balance);
+            }
+        }
+        class CurrentAccount implements Account{
+            double balance;
+            int overdraftlimit = 10000;
+            public boolean deposit(double amt){
+                if(amt <= 0){
+                    System.out.println("Amount Should be greater than 0");
+                    return false;
+                }
+                else{
+                    balance += amt;
+                    System.out.println(amt + " Deposited Successfully");
+                    viewBalance();
+                    return true;
+                }
+            }
+            public boolean withdraw(double amt){
+                if(amt <= 0){
+                    System.out.println("Amount Should be greater than 0");
+                    return false;
+                }
+                else if(((balance+overdraftlimit)-amt) < 0){
+                    System.out.println("Insufficient Balance in account");
+                    viewBalance();
+                    return false;
+                }
+                else{
+                    balance -= amt;
+                    System.out.println(amt + " Withdrawl Successfully");
+                    viewBalance();
+                    return true;
+                }
+            }
+            public double calcInterest(){
+                return 0.0;
+            }
+            public void viewBalance(){
+                System.out.println("Account Balance : " + balance);
+                System.out.println("Over Draft Limit : " + overdraftlimit);
+        
+            }
+        }
+        
+        class Main{
+            public static void main(String[] args){
+                Bank sbi = new Bank();
+        
+                SavingAccount acc1 = new SavingAccount();
+                CurrentAccount acc2 = new CurrentAccount();
+                
+                sbi.addAccount(acc1);
+                sbi.addAccount(acc2);
+        
+                System.out.println("Account Type : Saving Account");
+        
+                acc1.deposit(80000);
+                System.out.println("Annually Interest : " + acc1.calcInterest());
+                acc1.withdraw(90000);
+                acc1.withdraw(10000);
+        
+                System.out.println("Account Type : Current Account");
+        
+                acc2.deposit(5000);
+                System.out.println("Annually Interest : " + acc2.calcInterest());
+                acc2.withdraw(7000);
+                acc2.withdraw(10000);
+            }
+        }
+          Output
+        Account Type : Saving Account
+        80000.0 Deposited Successfully
+        Account Balance : 80000.0
+        Annually Interest : 2400.0
+        Your Withdrawl Limit is 80000
+        10000.0 Withdrawl Successfully
+        Account Balance : 70000.0
+        Account Type : Current Account
+        5000.0 Deposited Successfully
+        Account Balance : 5000.0
+        Over Draft Limit : 10000
+        Annually Interest : 0.0
+        7000.0 Withdrawl Successfully
+        Account Balance : -2000.0
+        Over Draft Limit : 10000
+        Insufficient Balance in account
+        Account Balance : -2000.0
+        Over Draft Limit : 10000
+    </pre>
+</body>
+</html>

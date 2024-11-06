@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <pre>
+    class Main{
+        static void charBetween(char a, char b){
+            if(Character.compare(a, b) == 0 || ((a+1) == b)){
+                System.out.println("No Characters are present between " + a + " and " + b);
+            }
+            else if(Character.compare(a, b) < 0){
+                a++;
+                while(a != b){
+                    System.out.print(a++ + "\t");
+                }
+            }
+            else{
+                b++;
+                while(b != a){
+                    System.out.print(b++ + "\t");
+                }
+            }
+        }
+        public static void main(String[] args){
+            System.out.println("Character Between A and F : ");
+            charBetween('A', 'F');
+        }
+    }
+      Output
+    Character Between A and F :
+    B       C       D       E
+   </pre> 
+</body>
+</html>
